@@ -1,0 +1,268 @@
+{
+  "PATCH /api/v1/auth/me": {
+    "email": "{{auth.username}}",
+    "username": "{{auth.username}}"
+  },
+  "PATCH /api/v1/organizations/{organization_id}": {
+    "name": "{{random.name}}"
+  },
+  "PATCH /api/v1/permissions/{permission_id}": {
+    "status": "{{random.status}}",
+    "description": "{{random.description}}"
+  },
+  "PATCH /api/v1/project-types/{project_type_id}": {
+    "name": "{{random.name}}"
+  },
+  "PATCH /api/v1/roles/{role_id}": {
+    "name": "{{random.name}}",
+    "permissions": "{{random.permissions}}"
+  },
+  "PATCH /api/v1/test-entities/{test_entity_id}": {
+    "name": "{{random.name}}"
+  },
+  "PATCH /api/v1/users/{user_id}": {
+    "email": "{{random.email}}",
+    "status": "{{random.status}}",
+    "username": "{{random.username}}"
+  },
+  "PATCH /api/v1/users/{user_id}/role": {
+    "role_id": "{{random.role_id}}"
+  },
+  "PATCH /api/v1/users/{user_id}/super-admin": {
+    "is_super_admin": "{{random.is_super_admin}}"
+  },
+  "PATCH /api/v1/workspaces/{workspace_id}": {
+    "name": "Project Alpha Renamed",
+    "description": "{{random.description}}",
+    "project_type_id": "{{random.project_type_id}}"
+  },
+  "POST /api/v1/access-keys": {
+    "name": "{{random.name}}",
+    "expires_at": "{{random.expires_at}}"
+  },
+  "POST /api/v1/auth/change-password": {
+    "new_password": "{{random.new_password}}",
+    "current_password": "{{random.current_password}}"
+  },
+  "POST /api/v1/auth/forgot-password": {
+    "email": "{{random.email}}"
+  },
+  "POST /api/v1/auth/login": {
+    "password": "{{auth.password}}",
+    "username_or_email": "{{auth.username}}"
+  },
+  "POST /api/v1/auth/reset-password": {
+    "reset_token": "{{random.reset_token}}",
+    "new_password": "{{random.new_password}}"
+  },
+  "POST /api/v1/internal/workers/notify-sse": {
+    "event": "{{random.event}}",
+    "channel": "{{random.channel}}"
+  },
+  "POST /api/v1/mfa/disable": {
+    "otp_code": "{{random.otp_code}}",
+    "password": "{{auth.password}}"
+  },
+  "POST /api/v1/mfa/enable": {
+    "otp_code": "{{random.otp_code}}"
+  },
+  "POST /api/v1/mfa/regenerate": {
+    "otp_code": "{{random.otp_code}}"
+  },
+  "POST /api/v1/mfa/verify": {
+    "otp_code": "{{random.otp_code}}",
+    "challenge_token": "{{random.challenge_token}}"
+  },
+  "POST /api/v1/organizations": {
+    "name": "{{random.name}}",
+    "slug": "{{random.slug}}",
+    "admin_email": "{{auth.username}}",
+    "admin_password": "{{auth.password}}",
+    "admin_username": "{{auth.username}}",
+    "generate_access_key": "{{random.generate_access_key}}",
+    "enable_console_login": "{{auth.username}}"
+  },
+  "POST /api/v1/permissions": {
+    "status": "{{random.status}}",
+    "description": "{{random.description}}",
+    "permission_name": "{{random.permission_name}}"
+  },
+  "POST /api/v1/project-types": {
+    "name": "{{random.name}}",
+    "slug": "{{random.slug}}"
+  },
+  "POST /api/v1/roles": {
+    "name": "{{random.name}}",
+    "slug": "{{random.slug}}",
+    "permissions": "{{random.permissions}}",
+    "organization_id": "{{random.organization_id}}"
+  },
+  "POST /api/v1/scenario-portal/apis/{api_id}/context/jira": {
+    "label": "{{random.label}}",
+    "jiraKey": "{{random.jiraKey}}"
+  },
+  "POST /api/v1/scenario-portal/proxy/api/import": {
+    "type": "{{random.type}}",
+    "value": "{{random.value}}"
+  },
+  "POST /api/v1/scenario-portal/recorder/record": {
+    "url": "{{random.url}}",
+    "framework": "{{random.framework}}",
+    "featureName": "{{random.featureName}}"
+  },
+  "POST /api/v1/scenario-portal/scenarios/{scenario_id}/upload": {
+    "file": "{{random.file}}"
+  },
+  "POST /api/v1/scenario-portal/scenarios/api-bdd/generate": {
+    "endpoints": {
+      "body": "{{random.body}}",
+      "path": "{{random.path}}",
+      "method": "{{random.method}}",
+      "headers": "{{random.headers}}",
+      "summary": "{{random.summary}}",
+      "responseCodes": "{{random.responseCodes}}",
+      "request_schema": "{{random.request_schema}}",
+      "requiredFields": "{{random.requiredFields}}",
+      "response_schema": "{{random.response_schema}}",
+      "requestContentType": "{{random.requestContentType}}"
+    },
+    "isJourney": "{{random.isJourney}}",
+    "testCaseId": "{{random.testCaseId}}",
+    "description": "{{random.description}}",
+    "featureName": "{{random.featureName}}",
+    "testScenarioId": "{{random.testScenarioId}}"
+  },
+  "POST /api/v1/scenario-portal/scenarios/api-bdd/suggest-endpoints": {
+    "endpoints": {
+      "body": "{{random.body}}",
+      "path": "{{random.path}}",
+      "method": "{{random.method}}",
+      "headers": "{{random.headers}}",
+      "summary": "{{random.summary}}",
+      "responseCodes": "{{random.responseCodes}}",
+      "request_schema": "{{random.request_schema}}",
+      "requiredFields": "{{random.requiredFields}}",
+      "response_schema": "{{random.response_schema}}",
+      "requestContentType": "{{random.requestContentType}}"
+    },
+    "description": "{{random.description}}"
+  },
+  "POST /api/v1/scenario-portal/scenarios/generate": {
+    "epicKey": "{{random.epicKey}}",
+    "epicName": "{{random.epicName}}",
+    "platform": "{{random.platform}}",
+    "storyKey": "{{random.storyKey}}",
+    "framework": "{{random.framework}}",
+    "storyName": "{{random.storyName}}",
+    "projectKey": "{{random.projectKey}}",
+    "description": "{{random.description}}",
+    "scenarioText": "{{random.scenarioText}}"
+  },
+  "POST /api/v1/scenario-portal/scenarios/generate-batch": {
+    "apiIds": "{{random.apiIds}}",
+    "epicKey": "{{random.epicKey}}",
+    "projectKey": "{{random.projectKey}}"
+  },
+  "POST /api/v1/scenario-portal/scenarios/parse-upload": {
+    "file": "{{random.file}}"
+  },
+  "POST /api/v1/scenario-portal/scenarios/upload": {
+    "file": "{{random.file}}"
+  },
+  "POST /api/v1/scenario-portal/settings/ai": {
+    "BROWSER": "{{random.BROWSER}}",
+    "AI_MODEL": "{{random.AI_MODEL}}",
+    "HEADLESS": "{{random.HEADLESS}}",
+    "AI_API_KEY": "{{random.AI_API_KEY}}",
+    "GEMINI_API_KEY": "{{random.GEMINI_API_KEY}}"
+  },
+  "POST /api/v1/scenario-portal/settings/jira": {
+    "JIRA_URL": "{{random.JIRA_URL}}",
+    "JIRA_EMAIL": "{{random.JIRA_EMAIL}}",
+    "JIRA_API_TOKEN": "{{random.JIRA_API_TOKEN}}"
+  },
+  "POST /api/v1/scenario-portal/test-cases/generate": {
+    "testCases": "{{random.testCases}}",
+    "description": "{{random.description}}",
+    "scenarioIds": "{{random.scenarioIds}}"
+  },
+  "POST /api/v1/scenario-portal/test-cases/generate-batch": {
+    "scenarioIds": "{{random.scenarioIds}}"
+  },
+  "POST /api/v1/scenario-portal/workspace/save-file": {
+    "content": "{{random.content}}",
+    "category": "{{random.category}}",
+    "fileName": "{{random.fileName}}",
+    "framework": "{{random.framework}}"
+  },
+  "POST /api/v1/test-entities": {
+    "name": "{{random.name}}",
+    "slug": "{{random.slug}}"
+  },
+  "POST /api/v1/users": {
+    "email": "{{auth.username}}",
+    "role_id": "{{random.role_id}}",
+    "password": "{{auth.password}}",
+    "username": "{{auth.username}}",
+    "organization_id": "{{random.organization_id}}",
+    "generate_access_key": "{{random.generate_access_key}}",
+    "enable_console_login": "{{auth.username}}"
+  },
+  "POST /api/v1/workspaces": {
+    "name": "Project Alpha",
+    "description": "Regression test suite for the Alpha release.",
+    "swagger_url": "{{random.swagger_url}}",
+    "organization_id": "{{random.organization_id}}",
+    "project_type_id": 1,
+    "automation_configs": [
+      {
+        "framework": "Rest Assured",
+        "test_entity_id": 2
+      },
+      {
+        "framework": "Selenium",
+        "test_entity_id": 1
+      }
+    ]
+  },
+  "POST /api/v1/workspaces/{workspace_id}/members": {
+    "user_id": "{{random.user_id}}"
+  },
+  "POST /api/v1/workspaces/{workspace_id}/swagger-imports": {
+    "source": "{{random.source}}"
+  },
+  "PUT /api/v1/scenario-portal/scenarios/{scenario_id}": {
+    "description": "{{random.description}}",
+    "scenarioText": "{{random.scenarioText}}"
+  },
+  "PUT /api/v1/scenario-portal/settings/ai": {
+    "BROWSER": "{{random.BROWSER}}",
+    "AI_MODEL": "{{random.AI_MODEL}}",
+    "HEADLESS": "{{random.HEADLESS}}",
+    "AI_API_KEY": "{{random.AI_API_KEY}}",
+    "GEMINI_API_KEY": "{{random.GEMINI_API_KEY}}"
+  },
+  "PUT /api/v1/scenario-portal/settings/jira": {
+    "JIRA_URL": "{{random.JIRA_URL}}",
+    "JIRA_EMAIL": "{{random.JIRA_EMAIL}}",
+    "JIRA_API_TOKEN": "{{random.JIRA_API_TOKEN}}"
+  },
+  "PUT /api/v1/scenario-portal/settings/user/current-environment": {
+    "environment": "{{random.environment}}"
+  },
+  "PUT /api/v1/scenario-portal/settings/user/environments/{environment}": {
+    "APP_OTP": "{{random.APP_OTP}}",
+    "APP_BASE_URL": "{{random.APP_BASE_URL}}",
+    "APP_PASSWORD": "{{auth.password}}",
+    "APP_USERNAME": "{{auth.username}}"
+  },
+  "PUT /api/v1/scenario-portal/test-cases/{test_case_id}": {
+    "name": "{{random.name}}",
+    "testCases": "{{random.testCases}}"
+  },
+  "PUT /api/v1/workspaces/{workspace_id}/github-config": {
+    "pat": "{{random.pat}}",
+    "repository_url": "{{random.repository_url}}",
+    "github_username": "{{auth.username}}"
+  }
+}
